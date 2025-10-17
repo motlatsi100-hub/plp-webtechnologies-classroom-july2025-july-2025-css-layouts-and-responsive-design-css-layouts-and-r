@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex; /* Flexbox for navigation */
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Grid Layout for Main Content */
+.grid-container {
+  display: grid; /* CSS Grid */
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Content Section */
+.content {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Sidebar Section */
+.sidebar {
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Flexbox for Cards inside Sidebar */
+.card-container {
+  display: flex;
+  flex-direction: column; /* stack cards vertically */
+  gap: 15px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 15px;
+  border: 2px solid #00acc1;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* stack content and sidebar */
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 15px;
+  }
+
+  .content, .sidebar {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+}
